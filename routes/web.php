@@ -16,6 +16,11 @@ route::get('/profile', [MahasiswaController::class,'index']);
 route::get('/project', [ProjectController::class,'index'])->name('project.index');
 route::get('/project/{id}', [ProjectController::class,'show'])->name('project.show');
 
+route::prefix('admin')->group(function(){
+    Route::get('/', function(){
+        return view('admin.template');
+    })->name('admin.home');
+});
 
 
 ?>
