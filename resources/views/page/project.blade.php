@@ -34,7 +34,7 @@
                     {{-- Gambar project --}}
                     @if ($project->image)
                         <img
-                            src="{{ asset('img/' . $project->image) }}"
+                            src="{{ asset('storage/' . $project->image) }}"
                             class="card-img-top project-image"
                             alt="{{ $project->title }}"
                         >
